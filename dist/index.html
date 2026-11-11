@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101611" />
+  <title>Frontier Protocol — Deadzone</title>
+  <script type="module" crossorigin src="/assets/index-Dz3IcDtM.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bn8JxI9Q.css">
+</head>
+<body>
+  <div id="game-root">
+    <canvas id="game"></canvas>
+    <div class="scanlines"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">FP</span><span>FRONTIER <b>PROTOCOL</b><small>SECTOR 07 / DEADZONE</small></span></div>
+      <div class="mission"><span class="live-dot"></span> OPERATION IRON HARVEST <small>WAVE <b id="wave">01</b></small></div>
+      <div class="wallet"><span class="coin">¢</span><span id="credits">450</span><small>CREDITS</small></div>
+      <button class="icon-btn" id="menu-open" title="Open field terminal (E)">☰</button>
+    </header>
+    <div class="left-info"><div class="objective-card"><span class="eyebrow">PRIMARY DIRECTIVE</span><b>SECURE THE OUTPOST</b><p>Eliminate hostiles. Salvage the deadzone.</p><div class="objective-progress"><span id="objective-fill"></span></div><small><span id="kills">0</span> / 8 HOSTILES NEUTRALIZED</small></div><div class="zone-tag"><i>⌖</i> CRATER BASIN <span>•</span> 24°C</div></div>
+    <div class="right-info"><div class="team-card"><span class="eyebrow">FIELD STATUS</span><div><i class="status-pip"></i> <b>SOLO OPERATIVE</b></div><small id="class-label">VANGUARD · LV 01</small><div class="xp-track"><span id="xp-fill"></span></div><small>FIELD XP <span id="xp-text">0 / 100</span></small></div><div class="minimap"><div class="map-grid"></div><span class="map-player">▲</span><span class="map-enemy e1">◆</span><span class="map-enemy e2">◆</span><small>N</small></div></div>
+    <div class="bottom-left"><div class="vital"><span>VITALS</span><div class="bar"><i id="health-fill"></i></div><b id="health-text">100</b></div><div class="vital armor-vital"><span>ARMOR</span><div class="bar"><i id="armor-fill"></i></div><b id="armor-text">25</b></div></div>
+    <div class="bottom-center"><div class="crosshair"><i></i><i></i><i></i><i></i><b></b></div><div class="interaction" id="interaction">[ F ] SALVAGE RESOURCE</div></div>
+    <div class="bottom-right"><div class="weapon-card"><div><span class="eyebrow" id="weapon-kind">ASSAULT RIFLE · MK I</span><div class="weapon-name" id="weapon-name">RANGER <span>01</span></div><small id="ammo">30 <i>/</i> 120</small></div><div class="weapon-graphic">╱╲<br>━━╋━━</div></div><div class="hotkeys"><span><b>1</b> WEAPON</span><span><b>2</b> TOOL</span><span><b>R</b> RELOAD</span></div></div>
+    <div id="toast" class="toast"></div>
+    <section class="start-screen" id="start-screen"><div class="start-panel"><div class="eyebrow">FRONTIER PROTOCOL <span>● LIVE SIMULATION</span></div><h1>THE FRONTIER<br/><em>IS YOURS.</em></h1><p>Drop into the Deadzone. Build your loadout, harvest what remains, and hold the line against the machine horde.</p><div class="start-stats"><span><b>05</b> OPERATIVE CLASSES</span><span><b>∞</b> FRONTIER TO CLAIM</span></div><button id="deploy" class="primary-btn">DEPLOY TO DEADZONE <span>→</span></button><small class="start-hint">WASD MOVE <i>·</i> MOUSE AIM <i>·</i> LEFT CLICK FIRE <i>·</i> F SALVAGE <i>·</i> E FIELD TERMINAL</small></div><div class="start-side"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="start-emblem">✳</div><div class="side-coordinate">40° 42' 51.2" N<br/>74° 00' 21.8" W</div></div></section>
+    <section class="terminal hidden" id="terminal"><div class="terminal-head"><div><span class="eyebrow">PERSONAL FIELD TERMINAL · SECURE CHANNEL</span><h2>OPERATIVE <em>LOADOUT</em></h2></div><button class="close-btn" id="menu-close">ESC <b>×</b></button></div><div class="terminal-tabs"><button class="tab active" data-tab="classes">01 <b>CLASSES</b></button><button class="tab" data-tab="craft">02 <b>CRAFTING</b></button><button class="tab" data-tab="armory">03 <b>ARMORY</b></button><button class="tab" data-tab="inventory">04 <b>INVENTORY</b></button></div><div class="terminal-content" id="terminal-content"></div><div class="terminal-foot"><span>◈ RESOURCES <b id="resource-summary">0 SCRAP · 0 CRYSTAL · 0 FIBER</b></span><span>FIELD TERMINAL <i>● ENCRYPTED</i></span></div></section>
+    <div id="damage-flash"></div>
+  </div>
+</body>
+</html>
